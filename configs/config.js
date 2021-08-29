@@ -1,12 +1,10 @@
-require("dotenv").config();
-
-const { RPCUSERNAME, RPCPASSWORD, RPCPORT } = process.env;
+const { RPCUSERNAME, RPCPASSWORD, RPCPORT, RPCHOST } = process.env;
 
 const config = {
     rpcUser: RPCUSERNAME,
     rpcPass: RPCPASSWORD,
     rpcPort: RPCPORT,
-    rpcHost: process.env.RPCHOST || "127.0.0.1",
+    rpcHost: RPCHOST || "127.0.0.1",
 };
 
 module.exports = config;
