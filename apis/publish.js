@@ -30,6 +30,7 @@ router.post(
             return res.status(400).json({ errors: errors.array() });
         }
 
+        console.log(req.body);
         const { stream, key, data } = req.body;
         try {
             mchain.publish(
